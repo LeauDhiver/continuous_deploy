@@ -1,0 +1,35 @@
+{
+  "name": "devops-02-p2-teamb",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with Fastify-CLI.",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap \"test/**/*.test.js\"",
+    "start": "fastify start -l info app.js",
+    "dev": "fastify start -w -l info -P app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xgro/devops-02-P2-TeamB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xgro/devops-02-P2-TeamB/issues"
+  },
+  "homepage": "https://github.com/xgro/devops-02-P2-TeamB#readme",
+  "dependencies": {
+    "@fastify/autoload": "^4.0.0",
+    "@fastify/sensible": "^4.0.0",
+    "fastify": "^3.0.0",
+    "fastify-cli": "^3.1.0",
+    "fastify-plugin": "^3.0.0"
+  },
+  "devDependencies": {
+    "tap": "^16.1.0"
+  }
+}
