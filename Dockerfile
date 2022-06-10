@@ -1,4 +1,4 @@
-FROM node:12
+FROM node:12 
 
 # 앱 디렉터리 생성
 WORKDIR /usr/src/app
@@ -16,6 +16,7 @@ RUN npm install
 # 앱 소스 추가
 COPY . .
 
+ENV FASTIFY_ADDRESS = "0.0.0.0"
 EXPOSE 3000
 
-CMD [ "npm", "start"]
+CMD [ "npm", "start" ]
