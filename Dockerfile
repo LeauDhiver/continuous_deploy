@@ -16,7 +16,6 @@ RUN npm install
 # 앱 소스 추가
 COPY . .
 
-ENV FASTIFY_ADDRESS = "0.0.0.0"
 EXPOSE 3000
 
 CMD [ "npm", "start" ]
