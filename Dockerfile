@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:12 
+FROM --platform=amd64 node:12 
 
 # 앱 디렉터리 생성
 WORKDIR /usr/src/app
