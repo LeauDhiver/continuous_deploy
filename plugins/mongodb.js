@@ -9,6 +9,6 @@ module.exports = fp(async function (fastify, opts) {
         // the default value is false
         forceClose: true,
     
-        url: MONGODB_ENDPOINT
+        url: process.env.MONGODB_ENDPOINT
     })
 })
