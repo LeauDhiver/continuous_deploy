@@ -2,6 +2,12 @@
 
 module.exports = async function (fastify, opts) {
   fastify.get('/', async function (request, reply) {
-    return 'this is an example'
+    const collection = this.mongo.db.collection('restaurant')
+    const result = await collection.find({}).toArray()
+    
+    reply
+      .code(200)
+      .header('content-type','application/json')
+      .send(result)
   })
 }
