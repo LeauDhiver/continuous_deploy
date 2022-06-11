@@ -2,7 +2,7 @@
 
 module.exports = async function (fastify, opts) {
   fastify.get('/', async function (request, reply) {
-    const collection = this.mongo.db.collection('restaurant')
+    const collection = this.mongo.db.collection('restaurants')
     const result = await collection.find({}).toArray()
     
     reply
