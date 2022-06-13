@@ -9,7 +9,7 @@
   "scripts": {
     "test": "tap \"test/**/*.test.js\"",
     "start": "FASTIFY_ADDRESS=0.0.0.0 fastify start -l info app.js ",
-    "dev": " MONGODB_ENDPOINT=mongodb://xadmin:xadmin1234@db-nlb-7a57e1bdfc4610ba.elb.ap-northeast-2.amazonaws.com:27017/baedal fastify start -w -l info -p 8080 -P app.js"
+    "dev": "fastify start -w -l info -p 8080 -P app.js"
   },
   "repository": {
     "type": "git",
