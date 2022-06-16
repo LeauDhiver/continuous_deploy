@@ -5,7 +5,7 @@ const { ObjectId } = require("@fastify/mongodb")
 module.exports = async function (fastify, opts) {
     fastify.patch('/', async function (request, reply) {        
         const collection = this.mongo.db.collection('restaurants')
-        const data = await collection.findOne({ _id: ObjectId("62a5776ea1a55a9af7bdbde0") })
+        const data = await collection.findOne({ _id: ObjectId(process.env.MARKET_ID) })
         
         if ( request.body.name !== undefined && request.body.name !== null ){
             data.name = request.body.name
@@ -15,8 +15,8 @@ module.exports = async function (fastify, opts) {
         }
         
         console.log(data)
-
-        const result = await collection.updateOne({_id: ObjectId("62a5776ea1a55a9af7bdbde0")}, {
+        
+        const result = await collection.updateOne({_id: ObjectId(process.env.MARKET_ID)}, {
         $set: { 
             name: data.name,
             address: data.address

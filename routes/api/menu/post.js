@@ -7,7 +7,7 @@ module.exports = async function (fastify, opts) {
         const menuPrice = request.body.price;
 
         const collection = this.mongo.db.collection('restaurants')
-        const data = await collection.findOne({ _id: ObjectId("62a5776ea1a55a9af7bdbde0") })
+        const data = await collection.findOne({ _id: ObjectId(process.env.MARKET_ID) })
         
         // console.log(data)
 
@@ -19,7 +19,7 @@ module.exports = async function (fastify, opts) {
                 price: menuPrice
             }
             data.menu.push(reqData);  
-            await collection.findOneAndUpdate({ _id: ObjectId("62a5776ea1a55a9af7bdbde0") }, { $set: { menu: data.menu } }, { returnDocument:"after" })
+            await collection.findOneAndUpdate({ _id: ObjectId(process.env.MARKET_ID) }, { $set: { menu: data.menu } }, { returnDocument:"after" })
 
             reply
             .code(201)
