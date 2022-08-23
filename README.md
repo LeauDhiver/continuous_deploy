@@ -1,9 +1,9 @@
 # 📌 매장 관리 API 프로젝트
 ## 👉 주제 선정
-
 - **음식점(매장관리)** : [매장관리](https://app.swaggerhub.com/apis-docs/gotoweb/restaurant/1.0)
 
----
+<br>
+
 ## 👉 배포방식 선정
 
 ### ✅ 프론트엔드
@@ -17,7 +17,7 @@
 3. Github → CodeBuild   
    프론트엔드 코드는 AWS의 서비스중 하나인 CodeBuild를 이용하여 CD 파이프라인 구축하였습니다.
     
-
+![front](https://user-images.githubusercontent.com/76501289/186059723-ab7d37b7-2d6f-4c27-a6de-713f7472b6ad.png)
 
 
 ### ✅ 백엔드
@@ -29,13 +29,17 @@
 3. Route53으로 커스텀 도메인 지정하여 [api.xgro.be](http://api.xgro.be) 와 같이 엔드포인트를 구성하였습니다.
 4. ALB를 이용해서 요청을 http → https 리다이렉트 하였습니다.
 
-
+![back](https://user-images.githubusercontent.com/76501289/186059737-c133a826-1752-4dd2-b3a2-eed2aab2bbfc.png)
 
 <br>
 
+## 👉 결과
+![image](https://user-images.githubusercontent.com/76501289/186059824-e95f094a-d51b-40a3-9bc6-91ab5f22c2aa.png)
+![image](https://user-images.githubusercontent.com/76501289/186059841-4ff63ef0-8d6e-43a8-8f10-67c0633147d4.png)
+
 
 ## 👉 Available Scripts
----
+
 In the project directory, you can run:
 
 ### `npm run dev`
