@@ -1,0 +1,37 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+  db:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: baedal
+    volumes:
+      - ./db/mongodb-data:/data/db
+      - ./db/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+
+  server:
+    depends_on:
+      - db
+    build: server
+    ports:
+      - "3000:3000"
+    environment:
+      MONGODB_ENDPOINT: "mongodb://root:example@db:27017/baedal"
+      MARKET_ID: "62a828e7b44347cda8889280"
+
+  client:
+    build: client
+    ports:
+      - "8080:3000"
+    environment:
+      REACT_APP_ENDPOINT: "http://localhost:3000"
+    depends_on:
+      - server
+
+# mongodb://root:example@mongo:27017/
