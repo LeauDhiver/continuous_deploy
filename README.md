@@ -50,5 +50,5 @@
 ## Cleanup
 Delete the stack
 ```
-    docker-compose down
+$ docker-compose down
 ```
