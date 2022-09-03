@@ -1,0 +1,50 @@
+.list-view {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.list-view ul, .list-view li {
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.list-header {
+  background-color: rgba(86, 75, 138, 0.81);
+  font-weight: bold;
+  color: white;
+}
+
+.list-item div {
+  flex: 1 0 30%;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.list-item div.col-id {
+  flex: 0 0 10%;
+}
+
+.list-item div:last-child {
+  padding-right: 1rem;
+}
+
+.list-item div:last-child.action-btns {
+  padding: 0;
+  padding-right: 1rem;
+  justify-content: end;
+}
+
+.list-item div:last-child.action-btns button {
+  padding: 0 1rem;
+  margin: 0.3rem 0 0.3rem 0.2rem;
+}
+
+.list-item.list-selectable:hover {
+  cursor: pointer;
+  background-color: #eee;
+  color: var(--main-bg-color)
+}
