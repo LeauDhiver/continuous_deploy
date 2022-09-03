@@ -37,16 +37,18 @@
 ![image](https://user-images.githubusercontent.com/76501289/186059824-e95f094a-d51b-40a3-9bc6-91ab5f22c2aa.png)
 ![image](https://user-images.githubusercontent.com/76501289/186059841-4ff63ef0-8d6e-43a8-8f10-67c0633147d4.png)
 
+<br>
 
-## 👉 Available Scripts
+## Available Scripts
 
-In the project directory, you can run:
+이 프로젝트를 로컬환경에서 테스트 하기 위해 `docker-compose.yaml`을 참조하여 주시기 바랍니다.
 
-### `npm run dev`
+`docker-compose up`을 이용하여 로컬 환경에서 프로젝트를 빠르게 구현할 수 있습니다.
 
-To start the app in dev mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
 
-### `npm start`
-
-For production mode
+## Cleanup
+Delete the stack
+```
+    docker-compose down
+```
