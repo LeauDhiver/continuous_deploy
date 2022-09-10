@@ -26,7 +26,7 @@
 
 1. ECS Fargate를 사용해서 Scale-out을 용이하게 구현하고자 하였습니다.  
 2. Github Action으로 CI/CD Pipeline 구축 하였습니다.  
-3. Route53으로 커스텀 도메인 지정하여 [https://api.xgro.be](https://api.xgro.be) 와 같이 엔드포인트를 구성하였습니다.
+3. Route53으로 커스텀 도메인 지정하여 `https://api.xgro.be`와 같이 엔드포인트를 구성하였습니다.
 4. ALB를 이용해서 요청을 http → https 리다이렉트 하였습니다.
 
 ![back](https://user-images.githubusercontent.com/76501289/186059737-c133a826-1752-4dd2-b3a2-eed2aab2bbfc.png)
