@@ -16,6 +16,7 @@ services:
       - ./db/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
   server:
+    image: xgro/project_02_server
     depends_on:
       - db
     build: server
@@ -27,6 +28,7 @@ services:
 
   client:
     build: client
+    image: xgro/project_02_client
     ports:
       - "8080:3000"
     environment:
